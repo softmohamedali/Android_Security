@@ -23,12 +23,6 @@ class MainActivity : ComponentActivity() {
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        RSASecurityCryptography
-        val pair: KeyPair = RSASecurityCryptography.getPairKeyFromKeyStore()
-
-        val signature: String = RSASecurityCryptography.sign("foobar", pair.private)
-        val isCorrect: Boolean = RSASecurityCryptography.verify("foobar", signature, pair.public)
-        Log.d("moali","======>"+"Signature correct: $isCorrect")
         setContent {
             Android_SecurityTheme {
                 // A surface container using the 'background' color from the theme
